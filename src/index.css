@@ -1,0 +1,10 @@
+body {
+  background: rgb(230, 230, 191);
+}
+
+.pic {
+  width: 200px;
+  height: 200px;
+  background: url('./koa.png');
+  background-size: cover;
+}

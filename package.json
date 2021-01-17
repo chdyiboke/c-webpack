@@ -1,0 +1,30 @@
+{
+  "name": "c-webpack",
+  "version": "1.0.0",
+  "description": "webpack 熟练使用",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chdyiboke/c-webpack.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "caiyi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chdyiboke/c-webpack/issues"
+  },
+  "homepage": "https://github.com/chdyiboke/c-webpack#readme",
+  "dependencies": {
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.1",
+    "loader-utils": "^2.0.0",
+    "webpack": "^5.15.0",
+    "webpack-cli": "^4.3.1"
+  }
+}
