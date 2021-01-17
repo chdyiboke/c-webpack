@@ -4,6 +4,7 @@ logs
 
 node_modules
 public/*
+dist/*
 undefined/*
 
 .hash.json
