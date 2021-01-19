@@ -4,7 +4,7 @@ const FileListPlugin = require('./plugins/FileListPlugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports ={
-  mode: 'production',
+  mode: 'production', // production  development
   entry:{
     index: './src/index.js',
     // a: './src/a.js'

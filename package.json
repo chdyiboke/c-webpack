@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/chdyiboke/c-webpack#readme",
   "dependencies": {
+    "@babel/preset-env": "^7.12.11",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
     "loader-utils": "^2.0.0",

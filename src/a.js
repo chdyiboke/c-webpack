@@ -1,3 +1,5 @@
-module.exports = function() {
-  return 'a';
+import B from './b'
+
+export default function() {
+  return B;
 }
