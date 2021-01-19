@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack",
+    "start": "webpack serve",
     "test": "test"
   },
   "repository": {
@@ -21,11 +22,16 @@
   },
   "homepage": "https://github.com/chdyiboke/c-webpack#readme",
   "dependencies": {
+    "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.1",
     "loader-utils": "^2.0.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.2"
   }
 }

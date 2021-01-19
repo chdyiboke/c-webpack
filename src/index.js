@@ -6,5 +6,11 @@ import B from './b'
 
 console.log('Bravo!');
 
-console.log(A);
+console.log(A()?.aaa?.ccc);
 console.log(B);
+
+const fun =()=>{
+  console.log('箭头');
+}
+fun();
+console.log('devserver');

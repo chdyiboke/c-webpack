@@ -17,12 +17,12 @@
   ]
 }
  */
-// module.exports = {
-//   presets: [
-//     "@babel/preset-env"
-//     // require.resolve('@babel/preset-env'),
-//   ],
-//   plugins: [
-//     // [require.resolve('@babel/plugin-transform-runtime'), { corejs: 3 }],
-//   ],
-// };
+module.exports = {
+  presets: [
+    "@babel/preset-env"
+    // require.resolve('@babel/preset-env'),
+  ],
+  plugins: [
+    [require.resolve('@babel/plugin-transform-runtime'), { corejs: 3 }],
+  ],
+};

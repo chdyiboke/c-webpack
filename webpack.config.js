@@ -3,8 +3,12 @@ const MyPlugin = require('./plugins/MyPlugin');
 const FileListPlugin = require('./plugins/FileListPlugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const TerserJSPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const { ModuleFederationPlugin } = require("webpack").container;
+
 module.exports ={
-  mode: 'production', // production  development
+  mode: 'development', // production  development
   entry:{
     index: './src/index.js',
     // a: './src/a.js'
@@ -31,12 +35,28 @@ module.exports ={
       {
         test: /\.(jpe?g|png|bmp|gif)$/,
         use: 'my-file-loader'
+      },{ 
+        test: /\.js$/, use: 'babel-loader' 
       }
     ],
+  },
+  optimization: {
+    minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
   },
   plugins:[
     new MyPlugin(),
     new FileListPlugin({filename: '_filelist.md'}),
+    new ModuleFederationPlugin({
+      name: "APP_NAME",
+      filename: 'remoteEntry.js',
+      library: { type: 'var', name: "APP_NAME" },
+      remotes: {
+         m1: "m1",
+         m2: "m2",
+         m3: 'm3',
+      },
+      shared: ['react', 'react-dom'],
+    }),
     // 渲染首页
     new HtmlWebpackPlugin({
       template: './src/index.html'
